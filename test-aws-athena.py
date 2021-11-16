@@ -104,7 +104,7 @@ FROM searchdb.keyword where part_hour between '%s' and '%s' and message.channel 
     #print(target_date, ",", result[0]['message_count'])
 
 def run_period():
-    start_date = date(2021, 9, 30)
+    start_date = date(2021, 8, 17)
     end_date = date(2021, 11, 1)
     
     for dt in daterange(start_date, end_date):

@@ -5,10 +5,14 @@ from urllib import parse
 from datetime import datetime
 from elasticsearch import Elasticsearch, RequestsHttpConnection, helpers
 import csv
+from nltk.corpus import words
+# import nltk
+# nltk.download('words')
 
 API_HOST = "pri-api.dev.srch.skplanetx.com"
 API_PORT = 80
 API_PATH = "/api/common/analyze/tokenizer"
+WORDS_SET = set(words.words())
 
 def get_doc_from_line(line):
     doc = json.loads(line)
@@ -31,7 +35,7 @@ def call_api(keyword):
     return token_list
 
 def is_english_only(s):
-    p = re.compile('[a-zA-Z-_\.\\s]+$') # a-z A-Z - _ . blank
+    p = re.compile("[a-zA-Z0-9-_&#':+,’`?.\\s]+$") # a-z A-Z - _ . blank
     m = p.match(s)
     if m:
         return True
@@ -40,7 +44,7 @@ def is_english_only(s):
 def process_title(title):
     noun_list = [ ]
     print(f"title={title}")
-    p = re.compile('[a-zA-Zㄱ-ㅎ가-힣0-9][^()]*[a-zA-Zㄱ-ㅎ가-힣0-9]')
+    p = re.compile('[a-zA-Zㄱ-ㅎ가-힣0-9][^()\[\]<>]*[a-zA-Zㄱ-ㅎ가-힣0-9]')
     subtitle_list = p.findall(title)
     print(f"subtitle_list={subtitle_list}")
     for subtitle in subtitle_list:
@@ -90,6 +94,9 @@ def process_csv_title(file_path):
 #                break
     return noun_dict
 
+def in_english_dictionary(word):
+    return word in WORDS_SET
+
 def process_csv_artist(file_path):
     noun_dict = { }
     print("process_csv_artist() start: {} {}".format(file_path, datetime.today()))
@@ -102,10 +109,11 @@ def process_csv_artist(file_path):
                 print(artist, "=>", noun_list)
 
             for noun in noun_list:
-                if (len(noun) > 1 and not noun in noun_dict):
-                    noun_dict[noun] = noun
+                lowercase_noun = noun.lower()
+                if (len(lowercase_noun) > 1 and not lowercase_noun in noun_dict and not in_english_dictionary(lowercase_noun)):
+                    noun_dict[lowercase_noun] = lowercase_noun
                 else:
-                    print("Duplicate or length=1", noun)
+                    print("Duplicate or length=1", lowercase_noun)
     return noun_dict
 
 def process_json(file_path):
@@ -121,11 +129,11 @@ def process_json(file_path):
             process_title(doc['title'])
 
 
-noun_dict = process_csv_title("rmc-meta-20211104.csv")
+noun_dict = process_csv_title("rmc_meta_20211104.csv")
 print("### title")
 for k, v  in noun_dict.items():
     print(k)
-#noun_dict = process_csv_artist("rmc-meta-20211104.csv")
+#noun_dict = process_csv_artist("rmc_meta_20211104.csv")
 #print("###")
 #for k, v  in noun_dict.items():
 #    print(k)
