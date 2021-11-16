@@ -35,7 +35,7 @@ def call_api(keyword):
     return token_list
 
 def is_english_only(s):
-    p = re.compile("[a-zA-Z0-9-_&#':+,’`?.\\s]+$") # a-z A-Z - _ . blank
+    p = re.compile("[a-zA-Z0-9-_&#':+,’`?!.\\s]+$") # a-z A-Z - _ . blank
     m = p.match(s)
     if m:
         return True
@@ -44,11 +44,15 @@ def is_english_only(s):
 def process_title(title):
     noun_list = [ ]
     print(f"title={title}")
-    p = re.compile('[a-zA-Zㄱ-ㅎ가-힣0-9][^()\[\]<>]*[a-zA-Zㄱ-ㅎ가-힣0-9]')
+    # 괄호 포함하지 않는 한글 or 영어 
+    # 한글 [ㄱ-ㅎ가-힣0-9-_+?,:;][^a-zA-Z()\[\]<>]*
+    # 영어 [a-zA-Z0-9-_+?,:;][^ㄱ-ㅎ가-힣()\[\]<>]*
+    p = re.compile('[ㄱ-ㅎ가-힣0-9-_+?,:;][^a-zA-Z()\[\]<>]*|[a-zA-Z0-9-_+?,:;][^ㄱ-ㅎ가-힣()\[\]<>]*')
+#    p = re.compile('[a-zA-Zㄱ-ㅎ가-힣0-9][^()\[\]<>]*[a-zA-Zㄱ-ㅎ가-힣0-9]')
     subtitle_list = p.findall(title)
     print(f"subtitle_list={subtitle_list}")
     for subtitle in subtitle_list:
-        noun_list.extend(process_subtitle(subtitle))
+        noun_list.extend(process_subtitle(subtitle.strip()))
     return noun_list
 
 def process_subtitle(subtitle):
@@ -70,7 +74,7 @@ def process_subtitle(subtitle):
         noun_list.append(cnoun)
     return noun_list
 
-RE_SPECIAL = "[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]"
+RE_SPECIAL = "[(){}\[\]\/?.,;:|*~`!^\-_+<>@\#$%&\\\=\'\"]"
 #RE_SPECIAL = "[^0-9a-zA-Z]"
 def process_artist(artist):
     nartist, n = re.subn(RE_SPECIAL, " ", artist)
@@ -91,7 +95,7 @@ def process_csv_title(file_path):
                     noun_dict[cnoun] = cnoun
             total += 1
 #            if (total >= 100):
-#                break
+#               break
     return noun_dict
 
 def in_english_dictionary(word):
