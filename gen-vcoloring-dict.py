@@ -1,3 +1,5 @@
+# title명으로 유사어 사전 생성
+# artist명으로 사용자 사전 생성
 import json
 import re
 import http.client # python3에서 httplib -> http.client 로 변경됨. class는 동일
