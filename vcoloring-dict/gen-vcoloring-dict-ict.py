@@ -41,5 +41,16 @@ def process_csv_synonym(file_path):
             value = row['유의어']
             print(f"{keyword} => {value}")
 
-process_csv_synonym("rmc-ict-synonym-20211206.csv")
+def process_csv_synonym_keyword(file_path):
+    noun_dict = { }
+    print("process_csv_synonym_keyword() start: {} {}".format(file_path, datetime.today()))
+    with open(file_path) as csv_file:
+        reader = csv.DictReader(csv_file)
+        for row in reader:
+            keyword = row['검색어']
+            value = row['유의어']
+            if ("," in keyword):
+                print(f"{keyword} => {value}")
+
+process_csv_synonym_keyword("rmc-ict-synonym-20211206.csv")
 

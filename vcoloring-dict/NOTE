@@ -1,0 +1,24 @@
+# 수정 사항
+마지막에 특수문자, 한자 포함하는 경우 제외
+Deja Vu -> 유사어 사전에 DejaVu 등록 
+  사용자 사전에 deja+vu 만 등록시 
+    Deja Vu -> deja/sl, vu/sl 로 분석
+    DejaVu -> deja/n, vu/n으로 다르게 분석되어 문제가 됨
+Ur+So+F**kInG+cOoL 삭제
+타임랩스_살구+꽃
+싱어게인+17호+가수의+'너에게로+또+다시'
+PLEASE+DON’T…
+feat.+Jhené+Aiko
+G.+Holst+-+St.+Paul's+Suite+No.1+＆+4
+re;code+Episode+Ⅷ
+Tiësto+Remix
+
+# 사용자 사전 추가
+피
+눈물
+새해
+착+붙으링
+복+많이+받으링
+새해+복+받으링
+새해+복
+
