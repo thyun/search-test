@@ -2,15 +2,17 @@ import boto3
 import requests
 from requests_aws4auth import AWS4Auth
 
-#host = 'https://search-dev-search-es-63-v2-dkl6ndeea7eens5fs2b2nlncbe.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
-host = 'https://search-dev-search-es-68-m3m4ba72w3vnzzx7isgdh74fre.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
+#src_host = 'https://search-dev-search-es-63-v2-dkl6ndeea7eens5fs2b2nlncbe.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
+#dest_host = 'https://search-dev-search-es-68-m3m4ba72w3vnzzx7isgdh74fre.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
+src_host = 'https://vpc-prod-search-es-63-v1-swr3qvtzjhbygz5lcaqufzfioy.ap-northeast-2.es.amazonaws.com/'
+dest_host = 'https://vpc-prod-search-es-68-ms4p5ayzsizxydjnxlt4ph6utq.ap-northeast-2.es.amazonaws.com/'
 region = 'ap-northeast-2' # e.g. us-west-1
 service = 'es'
 credentials = boto3.Session().get_credentials()
 awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service, session_token=credentials.token)
 
 # Register repository - kibana에서 수행 불가 (권한 에러)
-def register_repo():
+def register_repo_dev():
     path = '_snapshot/opensearch-backup' # the OpenSearch API endpoint
     url = host + path
     
@@ -20,6 +22,26 @@ def register_repo():
         "bucket": "dev-srch-seoul-opensearch",
         "region": "ap-northeast-2",
         "role_arn": "arn:aws:iam::175979101058:role/dev-srch-snapshot-role"
+      }
+    }
+    
+    headers = {"Content-Type": "application/json"}
+    
+    r = requests.put(url, auth=awsauth, json=payload, headers=headers)
+    
+    print(r.status_code)
+    print(r.text)
+
+def register_repo_prod():
+    path = '_snapshot/opensearch-backup' # the OpenSearch API endpoint
+    url = host + path
+    
+    payload = {
+      "type": "s3",
+      "settings": {
+        "bucket": "prod-srch-seoul-opensearch",
+        "region": "ap-northeast-2",
+        "role_arn": "arn:aws:iam::456350226269:role/prod-srch-snapshot-role"
       }
     }
     
@@ -79,7 +101,7 @@ def restore_snapshot_index():
    
     print(r.text)
 
-register_repo()
+register_repo_prod()
 #take_snapshot()
 #restore_snapshot()
 #restore_snapshot_index()

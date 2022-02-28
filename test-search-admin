@@ -1,0 +1,44 @@
+# List channel
+curl -XPOST -H "Content-Type: application/json" "http://localhost:8080/apis/v2/channel" -d '{ }'
+{"resCode1":"000","resCode2":"0000","detailMsg":"정상 처리 되었습니다.","traceNo":"202111161619253299","responseData":{"counts":4,"channels":[{"id":1,"name":"OCB App"},{"id":2,"name":"Syrup"},{"id":3,"name":"OCB.COM"},{"id":4,"name":"vcoloring"}]}}
+
+# List dictionary
+# type: 1-사용자, 2-유사어, 3-교정
+curl -XPOST -H "Content-Type: application/json" "http://localhost:8080/apis/v2/dictionary/list" -d '{
+  "chnl": "vcoloring",
+  "requestData": {
+    "channelId": 1,
+    "type": 1,
+    "keyword": "",
+    "page": 0,
+    "size": 10
+  }
+}'
+
+# Upsert dictionary
+# 테스트해 보지 않았음
+curl -XPOST -H "Content-Type: application/json" "http://localhost:8080/apis/v2/dictionary/upsert" -d '{
+  "chnl": "vcoloring",
+  "requestData": {
+    "channelId": 1,
+    "type": 1,
+    "id": 0,
+    "keyword": "",
+    "value": "",
+    "delimiter": "",
+    "useFlag": "",
+    "userId": "1001291"
+  }
+}'
+
+# Job history
+curl -XPOST -H "Content-Type: application/json" "http://localhost:8080/apis/v2/jobhistory" -d '{
+  "chnl": "vcoloring",
+  "requestData": {
+    "startDate": "20211101",
+    "endDate": "20211101",
+    "page": 0,
+    "size": 10
+  }
+}'
+

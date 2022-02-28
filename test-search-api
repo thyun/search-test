@@ -1,4 +1,6 @@
 #!/bin/bash
+#curl http://localhost:8080/api/ocb/1.0/search/coupon52?q=coffee
+#curl -X GET "http://localhost:8080/api/generic/myservice/search/syrup_keyword_card52?allow_telecom=A%2C0&allow_type=1%2C3%2C5&app_ver=swagger_test&call_id=swagger_test&q=%EC%BB%A4%ED%94%BC&q.exact=true&referrer_code=swagger_test&rows=10" -H "accept: */*"
 
 # curl -s -w "\n\n%{time_connect} + %{time_starttransfer} = %{time_total}\n\n" https://naver.com
 # curl -s -w "\n%{time_starttransfer}\n" https://naver.com
@@ -13,3 +15,27 @@ curl -s -X GET "http://pri-api.dev.srch.skplanetx.com/api/ocb/2.0/search/all52?c
 #curl -X GET "http://pri-api.dev.srch.skplanetx.com/api/ocb/1.0/search?call_id=swagger_test&client_code=swagger_test&client_version=swagger_test&do_spell_checker=true&gugun_cd=001&ip_gugun_cd=001&ip_local_cd=50&local_cd=50&q=%EC%BB%A4%ED%94%BC&sort=benefit" -H "accept: */*" >> out-ocbcom1
 
 #curl -X GET "http://localhost:8080/api/ocb/1.0/search?call_id=swagger_test&client_code=swagger_test&client_version=swagger_test&do_spell_checker=true&gugun_cd=001&ip_gugun_cd=001&ip_local_cd=50&local_cd=50&q=%EC%BB%A4%ED%94%BC&sort=benefit" -H "accept: */*" >> out-ocbcom1n
+
+###### 자동완성
+curl -XGET -H "Content-Type: application/json" "https://search-dev-search-es-68-m3m4ba72w3vnzzx7isgdh74fre.ap-northeast-2.es.amazonaws.com/syrup_ac/_search" -d '
+{
+  "size": 21,
+  "query": {
+    "term": {
+      "token.keyword": {
+        "value": "ㅊ",
+        "boost": 1
+      }
+    }
+  },
+  "sort": [
+    {
+      "count": {
+        "order": "desc"
+      }
+    }
+  ]
+}
+'
+
+
