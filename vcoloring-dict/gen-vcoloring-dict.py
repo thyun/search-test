@@ -37,6 +37,13 @@ def call_api(keyword):
     return token_list
 
 def is_english_only(s):
+    p = re.compile("[a-zA-ZÀ-ɏ\\s\$]+$") # a-z, A-Z, latin extended-a, latin extended-b, blank
+    m = p.match(s)
+    if m:
+        return True
+    return False
+
+def is_english_number_only(s):
     p = re.compile("[a-zA-Z0-9-_&#:+,.?!/'’′‘`\\s\$]+$") # a-z A-Z - _ . blank
     m = p.match(s)
     if m:
@@ -77,7 +84,7 @@ def process_title(title):
 def process_subtitle(subtitle):
     noun_list = [ ]
     nsubtitle, n = re.subn("\\s+", "", subtitle)
-    if (is_english_only(subtitle)):
+    if (is_english_number_only(subtitle)):
         return noun_list
     if (subtitle == nsubtitle):
         return noun_list
@@ -130,9 +137,10 @@ def process_csv_artist(file_path):
                 print(artist, "=>", noun_list)
 
             for noun in noun_list:
+                if (len(noun) <= 1):
+                    continue
                 lowercase_noun = noun.lower()
-                if (len(lowercase_noun) > 1 and \
-                    not in_english_dictionary(lowercase_noun) and \
+                if (not in_english_dictionary(lowercase_noun) and \
                     not is_number_only(lowercase_noun) and \
                     not lowercase_noun in noun_dict):
                     noun_dict[lowercase_noun] = lowercase_noun
@@ -152,16 +160,70 @@ def process_json(file_path):
         for doc in json_docs:
             process_title(doc['title'])
 
+def get_english_noun(noun_list):
+    output_list = []
+    for noun in noun_list:
+        if (len(noun) > 1 and \
+#            not in_english_dictionary(noun) and \
+            not is_number_only(noun) and \
+            is_english_only(noun)):
+            output_list.append(noun)
+    return output_list
 
+def get_non_dictionary_noun(noun_list):
+    output_list = []
+    for noun in noun_list:
+        if (not in_english_dictionary(noun)):
+            output_list.append(noun)
+    return output_list
+
+def process_csv_english_artist(file_path):
+    artist_dict = {}
+    noun_dict = {}
+    print("process_csv_english_artist() start: {} {}".format(file_path, datetime.today()))
+    with open(file_path) as csv_file:
+        reader = csv.DictReader(csv_file)
+        for row in reader:
+            artist = row['artist']
+
+            if (len(artist) <= 0 and artist in artist_dict):
+                continue
+            artist_dict[artist] = artist
+            noun_list = process_artist(artist)
+            enoun_list = get_english_noun(noun_list) # 영어 단어 list
+            if (len(enoun_list) >=2):
+                print(artist, "=>", enoun_list)
+                for noun in enoun_list:
+                    if (len(noun) <= 1):
+                        continue
+                    lowercase_noun = noun.lower()
+                    if (not in_english_dictionary(lowercase_noun) and \
+                        not is_number_only(lowercase_noun) and \
+                        not lowercase_noun in noun_dict):
+                        noun_dict[lowercase_noun] = lowercase_noun
+                    else:
+                        print(lowercase_noun, "- lenght=1 | in english dictionary | number only | duplicate ")
+    return noun_dict
+
+### main
+# 테스트
+#noun_list = process_title("10억뷰 (Feat.MOON) (Mar Vista Remix)")
+#noun_list = process_artist("주진우 (JOO JIN-WOO)")
+#print(noun_list)
+
+# title 처리
 #noun_dict = process_csv_title("rmc_meta_20211104.csv")
 #print("### title")
 #for k, v  in noun_dict.items():
 #    print(k)
-noun_dict = process_csv_artist("rmc_meta_20211104.csv")
-print("###")
-for k, v  in noun_dict.items():
-    print(f"{k},{k}")
 
-#print(process_title("10억뷰 (Feat.MOON) (Mar Vista Remix)"))
-#noun_list = process_artist("주진우 (JOO JIN-WOO)")
+# artist 처리
+#noun_dict = process_csv_artist("rmc_meta_20211104.csv")
+#print("###")
+#for k, v  in noun_dict.items():
+#    print(f"{k},{k}")
 
+# 영어 artist 삭제
+noun_dict = process_csv_english_artist("rmc_meta_20211104.csv")
+for k, v in noun_dict.items():
+    print(f"delete from dictionary where channel_id=4 and type=1 and value='{k}'")
