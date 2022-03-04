@@ -1,0 +1,263 @@
+create_csv_synonym() start: rmc-ict-synonym-202202-create.csv 2022-03-04 13:41:25.476631
+call_api_upsert(): keyword= 24K  value= 24K,투포케이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= 2CELLOS value= 2CELLOS,투챌로스,투첼로스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= 2NE1 value= 2NE1,투애니원 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= 4minute value= 4minute,포미닛 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Aalia value= 알리아,Aalia id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= AB6IX value= AB6IX,에이비식스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= A-FLOW value= A-FLOW,에이플로우 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= AJ Tracey value= AJ Tracey,에이제이 트레이시 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Alesso value= Alesso,알레소 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= AleXa value= AleXa,알렉사 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Alexander Oscar value= Alexander Oscar,알렉산더 오스카,알렉산더오스카 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Alicia Keys value= Alicia Keys,앨리샤 키스,앨리샤키스,알리샤 키스,알리샤키스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= almost monday value= almost Monday,올모스트 먼데이,올모스트먼데이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Alt Bloom value= Alt Bloom,알트 블룸,알트블룸 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Amber Mark value= Amber Mark,엠버 마크,앰버마크 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Aminé value= Aminé,아미네,Amine id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= Amy Shark value= Amy Shark,에이미 샤크,에이미샤크 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Angelina danilova value= Angelina danilova,안젤리나 다닐로바,안젤리나다닐로바 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Anson Seabra value= Anson Seabra,앤슨 세아브라,앤슨세아브라 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Apink  value= Apink,에이핑크 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Arcade Fire value= Arcade Fire,아케이드 파이어,아케이드파이어 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= AREA21 value= AREA21,에리어21 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= ATEEZ value= ATEEZ,애이티즈,에이티즈 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Aurora value= Aurora,오로라 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Avicii value= Avicii,아비치 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= B.I value= 비아이,B.I id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= BENEE value= BENEE,베니 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Benjamin Ingrosso value= Benjamin Ingrosso,밴자민 인그로쏘,벤자민 인그로쏘,벤자민 인그로소 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= BE'O  value= BE'O,비오 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= BewhY value= BewhY,비와이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Beyoncé value= Beyoncé,Beyonce,비욘세 id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= BIG Naughty value= BIG Naughty,빅나티 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= BIGBANG value= BIGBANG,빅뱅 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Billie Marten value= Billie Marten,빌리 마틴,빌리 마튼 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Bleachers value= Bleachers,블러처스,블리쳐스,블리처스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= BM value= BM,비엠 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= BMK value= BMK,비엠케이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= bobae value= bobae,보배 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Brussels Philharmonic value= Brussels Philharmonic,브뤼셀 필하모닉 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= bülow value= bülow,Bulow, 뷸로,뷜로 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= BVNDIT value= BVNDIT,밴디트,벤디트 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Calfskin value= Calfskin,칼프스킨,카프스킨 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Carla Bruni value= Carla Bruni,칼라 브루니,카를라 브루니 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Carlie Hanson value= Carlie Hanson,칼리 핸슨 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Celeste value= Celeste,셀레스트 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= CHAI value= CHAI,차이,이수정 id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= Chloe Flower value= Chloe Flower,클로에 플라워 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Chris Garneau value= Chris Garneau,크리스 가르노 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Chris Murray value= Chris Murray,크리스 머레이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Christina Aguilera value= Christina Aguilera,크리스티나 아길레라,크리스티나 아길래라 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= CIKA value= CIKA,시카 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= CL value= CL,씨엘 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Cosmic Gate value= Cosmic Gate,코스믹 게이트,코스믹 개이트 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Cuco value= Cuco,쿠코 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Cyn value= Cyn,씨와이엔 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= DAKSHOOD value= 닥스후드,Dakshood id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Daniel Lozakovich value= Daniel Lozakovich,다니엘 로자코비치,다니앨 로자코비치 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Daniil Trifonov value= Daniil Trifonov,다닐 트리포노프 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= D-CRUNCH value= D-CRUNCH,D CRUNCH,디크런치 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Dean Lewis value= Dean Lewis,딘 루이스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Destiny Rogers value= Destiny Rogers,데스티니 로저스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= DK value= DK,디케이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= dosii value= dosii,도시 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Drake value= Drake, 드레이크, 드래이크,드레이크 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Duncan Laurence value= Duncan Laurence,덩컨 로런스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= EB value= EB,이비,최은빈 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Economy Choi value= Economy Choi,이코노미 최 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Eian value= Eian,이안 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= eldon value= eldon,엘든 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Ella Henderson value= Ella Henderson,엘라 헨더슨 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Ella Mai value= Ella Mai,앨라 마이,엘라 마이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Eminem value= Eminem,에미넴 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= EPEX value= EPEX,이펙스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Etham value= Etham,에담 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= FLETCHER value= FLETCHER,플레처 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Fousheé value= Fousheé,Foushee id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= Freddie Mercury value= Freddie Mercury,프레디 머큐리,프래디 머큐리 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= FTISLAND value= FTISLAND,에프티아일랜드 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Gallant value= Gallant,갈란트 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Giovanni Allevi value= Giovanni Allevi,지오바니 알래비,지오바니 알레비 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Glass Animals value= Glass Animals,글래스 에니멀스,글래스 애니멀스,글래스 애니멀즈,글레스 애니멀스,글레스 에니멀스,글레스 애니멀즈,글라스 애니멀스,글라스 애니멀즈,글라스 애니멀즈. 글라스 에니멀즈 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= GOT the beat value= 갓 더 비트,GOT the beat,갓더비트 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= GRAY value= 그레이,GRAY id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Gregory Porter value= Gregory Porter,그래고리 포터,그레고리 포터 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Haechi value= Haechi,해치 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= HAIM value= HAIM,하임 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= half·alive value= half·alive,하프 얼라이브,할프 얼라이브 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= HARRIANNE value= HARRIANNE,해리앤,해리엔 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Haru Kid value= Haru Kid,하루 키드 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Hauser value= Hauser,하우저 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= HI SUHYUN value= HI SUHYUN,하이 수현,하이수현 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Hisaishi Joe value= Hisaishi Joe,히사이시 조 id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= Hodge value= Hodge,호지 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Holland value= Holland,홀랜드 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Hookuo value= Hookuo,후쿠오 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= HUS value= Humming Urban Stereo,허밍어반스테레오,HUS,허밍 어반 스테레오 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Igor Levit value= Igor Levit,이고르 레빗,이고르 래빗 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= ILLSON value= ILLSON,Double K,일슨 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Inhaler value= Inhaler,인헤일러 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= ITZY value= ITZY, 있지 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= IVE value= IVE,아이브 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= IZ*ONE value= IZ*ONE,IZONE,아이즈원 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= J n joy 20 value= J n joy 20,제이앤조이 20,유준상,이준화 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= J. Cole value= J. Cole,제이 콜,재이 콜 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= James Bay value= James Bay,제임스 배이,재임스 베이,제임스 베이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= James TW value= James TW,제임스 티더블유,재임스 티더블유,제임스 TW id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= JAMIE value= JAMIE,박지민,제이미 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Jamie Cullum value= Jamie Cullum,제이미 컬럼 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Janet Suhh value= Janet Suhh,자넷서 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= JAWNY value= JAWNY,조니 유타,자니 유타,JOHNNY UTAH id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Jazmine Sullivan value= Jazmine Sullivan,제스민 설리번,재즈민 설리번 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= JBJ95 value= JBJ95,제이비제이구오 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= jeebanoff value= jeebanoff,지바노프 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Jens value= Jens,젠스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Jessica value= Jessica,제시카 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Jhené Aiko value= Jhené Aiko,Jhene Aiko,즈내 아이코,즈네 아이코,제인 아이코 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Jhnovr value= Jhnovr,Johnover,존오버 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= JK 김동욱 value= JK 김동욱,제이케이 김동욱 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Johnny Orlando value= Johnny Orlando,조니 올란도 id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= Johnny Stimson value= Johnny Stimson,조니 스팀슨 id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= Jonathan Groff value= Jonathan Groff,조나단 그로프,조너선 그로프 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Joseph Kim value= Joseph Kim,조셉 킴, 조셉 김 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Joymin value= Joymin,조이민 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Kameiro value= Kameiro카메이로 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Kanye West value= Kanye West,카녜이 웨스트, 카니예 웨스트 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= KEEMBO value= KEEMBO,킴보 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Kep1er value= Kep1er,케플러 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Kim Jeong_uk value= Kim Jeong_uk,김정욱 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Kings Of Convenience value= Kings Of Convenience,킹스 오브 컨비니언스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= KIRIN value= KIRIN, 기린 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Kirk Franklin value= Kirk Franklin,커크 프렝클린,커크 프랭클린 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Kisnue value= 키스누,Kisnue id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Kohway value= Kohway,코웨이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= KOONTA value= Koonta,쿤타 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Kungs value= Kungs,컹스,쿵스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= K타이거즈제로 value= K타이거즈제로,K-TIGERS ZERO id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= L.NDN value= 런던,L.NDN id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= LambC value= LambC,렘씨,램씨 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Lang Lang value= Lang Lang,랑 랑, 랑랑 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= LE value= LE,엘이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Lewis Capaldi value= Lewis Capaldi,루이스 카팔디 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Licens value= Licens,리첸스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Lil Mosey value= Lil Mosey,릴 모지,릴 모시 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Lola Young value= Lola Young,롤라 영 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Loren Gray value= Loren Gray,로렌 그레이,로렌 그래이,로랜 그레이,로랜 그래이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Luka Sulic value= Luka Sulic,루카 술릭 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Lukas Graham value= Lukas Graham,루카스 그레이엄 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= M.O value= M.O,엠오 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Madonna value= Madonna,마돈나 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Mae Muller value= Mae Muller,메이 뮬러 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Maisie Peters value= Maisie Peters,메이지 피터스,매이지 피터스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Marc E. Bassy value= Marc E. Bassy,마크 이 베시,마크 이 배시 id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= MC Meta value= MC Meta,엠씨 메타,MC 메타 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= MC 스나이퍼 value= MC 스나이퍼,엠씨 스나이퍼 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= MC민지 value= MC민지,엠씨 민지,mc minzy id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= meenoi value= 미노이,meenoi id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Michael Carreon value= Michael Carreon,마이클 케리언,마이클 캐리언 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Michael Kiwanuka value= Michael Kiwanuka,마이클 키와누카 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Migos value= Migos,미고스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= MIKA value= MIKA,미카 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= MISSKISS value= MISSKISS,미스키스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= MOBULL value= MOBULL,모불 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Mokyo value= Mokyo,모키오,모쿄 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= MSG워너비 value= MSG워너비,MOM,엠오엠 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= MUSM value= MUSM,엠유에스엠 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Naomi Scott value= Naomi Scott,나오미 스콧 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Natti Natasha value= Natti Natasha,나티 나타샤 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= New Hope Club value= New Hope Club,뉴 호프 클럽 id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= NF value= NF,엔에프 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Nieah value= Nieah,니아 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Niko Walters value= Niko Walters,니코 월터스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= NILD value= NILD,닐드 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Noah Kahan value= Noah Kahan,노아 카한 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= noovv value= 누브,Noovv id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Norah Jones value= Norah Jones,노라 존스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Nothing But Thieves value= Nothing But Thieves,나띵 벗 띠브즈,나씽 벗 띠브즈 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Offing value= Offing,오핑 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Oliver Tree value= Oliver Tree,올리버 트리 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Olivia Dean value= Olivia Dean,올리비아 딘 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Olivia Rodrigo value= Olivia Rodrigo,올리비아 로드리고 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= One OK Rock value= One OK Rock,원오크락,원 오크 록 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= onthedal value= onthedal,온더달 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= OP value= OP,오피 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Otis Lim value= Otis Lim,오티스림 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Ozuna value= Ozuna,오즈나 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= P.O value= P.O,피오 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Padi value= Padi,페디 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Pat Lok value= Pat Lok,팻 록,펫 록 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Peach Tree Rascals value= Peach Tree Rascals,피치 트리 래스칼스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= PERC%NT value= PERC%NT,PERCENT,퍼샌트,퍼센트 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= philtre value= philtre,필터 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Phum Viphurit value= Phum Viphurit,품 비푸리트 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Polo & Pan value= Polo & Pan,폴로 앤 팬 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= POLO value= POLO,폴로 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= PREP value= PREP,프랩,프렙 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= PRODUCE X 101 value= PRODUCE X 101,프로듀스 X 101 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= PUBLIC value= PUBLIC,퍼블릭 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Queen value= Queen,퀸 id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= Queen Naija value= Queen Naija,퀸 나이자 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Rad Museum value= Rad Museum,레드 뮤지엄,래드 뮤지엄,라드 뮤지엄 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Ragoon value= Ragoon,라군 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Retro Classic value= Retro Classic,레트로 클래식 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Risso value= Risso,리소,리쏘 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= ROLE MODEL value= ROLE MODEL,롤 모델 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Ruiz value= Ruiz,루이즈 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Ryland James value= Ryland James,라이랜드 제임스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= SAAY value= SAAY,쌔이,쎄이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Sage value= Sage,세이지,새이지 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Samm Henshaw value= Samm Henshaw,셈 핸쇼유,셈 헨쇼유,샘 핸쇼우.샘 헨쇼유 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= SE O value= 새오,세오,SE O id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= SEOMINGYU value= SEOMINGYU,서민규 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= SEOY value= SEOY,서이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Sheku Kanneh-Mason value= Sheku Kanneh-Mason,세쿠 카네 메이슨,세쿠 카네 매이슨,세쿠 카내 메이슨,세쿠 카내 매이슨,새쿠 카네 메이슨,새쿠 카네 매이슨,새쿠 카내 메이슨,새쿠 카내 매이슨 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Sigrid value= Sigrid,시그리드 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= SMTOWN value= SMTOWN,SM Town,에스엠타운,스엠타운,SM타운 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Sneezy value= Sneezy,스니지 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Sody value= Sody,쏘디,소디 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= SOMDEF value= SOMDEF,썸데프 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= SOOA-T value= SOOA-T ,수아트,장수아 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Soran value= Soran,소란 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= STAYC value= STAYC,스테이씨 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Stela Cole value= Stela Cole,스텔라 콜,스탤라 콜 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Stephen Puth value= Stephen Puth,스테판 푸스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Still Woozy value= Still Woozy,스틸 우지 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Sting value= Sting,스팅 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Stray Kids value= Stray Kids,스트레이 키즈 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= SUN KIM value= SUN KIM,선 킴 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= sunwashere value= sunwashere,썬워즈히어 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= SUPER JUNIOR-K.R.Y. value= SUPER JUNIOR-K.R.Y.,SUPER JUNIOR KRY,슈퍼주니어 KRY,슈퍼주니어 케이알와이,슈퍼쥬니어 KRY,슈퍼쥬니어 케이알와이,수퍼주니어 KRY,수퍼주니어 케이알와이,수퍼쥬니어 KRY,수퍼쥬니어 케이알와이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= SURL value= SURL,설 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Svng value= Svng,yeesang,이상 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Swae Lee value= Swae Lee,스웨 리 id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= TAEK value= TAEK,텍,택 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Taylor Swift value= Taylor Swift,테일러 스위프트 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= The 1975 value= The 1975,더 일구칠오,더 1975 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= The FunCity value= 더 펀시티,The Funcity id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= The Internet value= The Internet,디 인터냇,디 인터넷 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= The Piano Guys value= The Piano Guys,피아노 가이즈 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= THE UNI+ value= THE UNI+,더 유닛,THE UNIT,더 유닛 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= The Vamps value= The Vamps,벰프스,뱀프스,더 뱀프스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= The Walters value= The Walters,더 월터스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Tiësto value= Tiësto,타애스토,티에스토,티에스토 id= 0 response.status= 200 resCode1= 999 resCode2= A001 detailMsg= 이미 등록된 검색어입니다.
+call_api_upsert(): keyword= TO1 value= TO1,티오원 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Tori Kelly value= Tori Kelly,토리 캘리,토리 켈리 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= twocolors value= twocolors,투컬러스 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Valley value= Valley,밸리,벨리 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= VAV value= 브이에이브이,브이에이브이 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= V-Hawk value= V-Hawk,VHawk,브이호크 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Víkingur Ólafsson value= Víkingur Ólafsson,비킹구르 올라프손 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Webley value= Webley,웨블리 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Westlife value= Westlife,웨스트라이프 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Weston Estate value= Weston Estate,웨스턴 에스테이트 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= WH3N value= WH3N,웬 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= woo!ah! value= woo!ah!,우아 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Woodie Gochild value= Woodie Gochild,우디 고차일드 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= YB value= YB,윤도현밴드,와이비 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= YELO value= YELO,옐로 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= YENA value= YENA,예나 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= YUSU value= YUSU,유수 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Zak Abel value= Zak Abel,잭 아벨,잭 아밸,젝 아벨 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= Zayvo value= Zayvo,제이보,재이보 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.
+call_api_upsert(): keyword= ZENE THE ZILLA value= ZENE THE ZILLA,제네 더 질라 id= 0 response.status= 200 resCode1= 000 resCode2= 0000 detailMsg= 정상 처리 되었습니다.

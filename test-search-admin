@@ -7,9 +7,20 @@ curl -XPOST -H "Content-Type: application/json" "http://pri-admin.dev.srch.skpla
 curl -XPOST -H "Content-Type: application/json" "http://pri-admin.dev.srch.skplanetx.com/apis/v2/dictionary/list" -d '{
   "chnl": "vcoloring",
   "requestData": {
-    "channelId": 1,
-    "type": 1,
-    "keyword": "",
+    "channelId": 4,
+    "type": 2,
+    "keyword": "24K",
+    "page": 0,
+    "size": 10
+  }
+}'
+
+curl -XPOST -H "Content-Type: application/json" "http://pri-admin.dev.srch.skplanetx.com/apis/v2/dictionary/list" -d '{
+  "chnl": "vcoloring",
+  "requestData": {
+    "channelId": 4,
+    "type": 2,
+    "keyword": "2LSON ",
     "page": 0,
     "size": 10
   }
@@ -27,6 +38,17 @@ curl -XPOST -H "Content-Type: application/json" "http://pri-admin.dev.srch.skpla
     "value": "aaa",
     "delimiter": "",
     "useFlag": "1",
+    "userId": "1001291"
+  }
+}'
+
+# Delete dictionary
+curl -XPOST -H "Content-Type: application/json" "http://pri-admin.dev.srch.skplanetx.com/apis/v2/dictionary/delete" -d '{
+  "chnl": "vcoloring",
+  "requestData": {
+    "channelId": 4,
+    "type": 2,
+    "id": 238277,
     "userId": "1001291"
   }
 }'
