@@ -7,14 +7,27 @@
 # curl -s -w "\n%{time_starttransfer}\n" -X GET "http://pri-api.dev.srch.skplanetx.com/api/ocb/1.0/search/all52?call_id=swagger_test&client_code=swagger_test&client_version=swagger_test&do_spell_checker=true&gugun_cd=001&ip_gugun_cd=001&ip_local_cd=50&local_cd=50&q=커피"
 # curl -s -w "\n%{time_starttransfer}\n" -X GET "http://localhost:8080/api/ocb/1.0/search/all52?q=%EC%BB%A4%ED%94%BC&call_id=search_infra&client_code=client_code&client_version=test&n=50&do_spell_checker=true&lat=37.4021182&lon=127.1029423"
 
-# ocb
+### 검색
+# OCB 검색
 curl -s -X GET "http://pri-api.dev.srch.skplanetx.com/api/ocb/2.0/search/all52?call_id=swagger_test&client_code=swagger_test&client_version=swagger_test&do_spell_checker=true&gugun_cd=001&ip_gugun_cd=001&ip_local_cd=50&local_cd=50&q=%EC%BB%A4%ED%94%BC&sort=benefit" -H "accept: */*" >> out-ocb1
 curl -s -X GET "http://pri-api.dev.srch.skplanetx.com/api/ocb/2.0/search/all52?call_id=swagger_test&client_code=swagger_test&client_version=swagger_test&do_spell_checker=true&gugun_cd=001&ip_gugun_cd=001&ip_local_cd=50&local_cd=50&q=%EB%B2%84%EA%B1%B0%ED%82%B9&sort=benefit" -H "accept: */*" >> out-ocb2
 
-# ocb.com
+# OCB.com 검색
 #curl -X GET "http://pri-api.dev.srch.skplanetx.com/api/ocb/1.0/search?call_id=swagger_test&client_code=swagger_test&client_version=swagger_test&do_spell_checker=true&gugun_cd=001&ip_gugun_cd=001&ip_local_cd=50&local_cd=50&q=%EC%BB%A4%ED%94%BC&sort=benefit" -H "accept: */*" >> out-ocbcom1
 
 #curl -X GET "http://localhost:8080/api/ocb/1.0/search?call_id=swagger_test&client_code=swagger_test&client_version=swagger_test&do_spell_checker=true&gugun_cd=001&ip_gugun_cd=001&ip_local_cd=50&local_cd=50&q=%EC%BB%A4%ED%94%BC&sort=benefit" -H "accept: */*" >> out-ocbcom1n
+
+# 오사라마켓 검색
+// 개발 api gateway (Host header가 api.dev.srch.skplanetx.com이 아니라 k8s-server-devsearc-5fd52b04c0-2026622184.ap-northeast-2.elb.amazonaws.com로 전달되는 것으로 추측됨)
+curl -v -H'X-API-Key: rvcuHii8bR4D6cKTvdkN85EgWIyUQD8L2SHOLHKd' 'https://api.dev.srch.skplanetx.com/api/ohsara/1.0/search/all?q=coffee'
+// 개발 public alb
+curl -v -H'Host: api.dev.srch.skplanetx.com' http://k8s-server-devsearc-5fd52b04c0-2026622184.ap-northeast-2.elb.amazonaws.com/api/ohsara/1.0/search/all?q=coffee
+curl -v -H'Host: api.dev.srch.skplanetx.com' http://k8s-server-devsearc-5fd52b04c0-565817417.ap-northeast-2.elb.amazonaws.com/api/ohsara/1.0/search/all?q=coffee
+
+// 상용 private alb
+curl -v -H'Host: pri-api.srch.skplanetx.com' http://internal-k8s-server-prodsear-a51add82a6-711754439.ap-northeast-2.elb.amazonaws.com/api/ohsara/1.0/search/all?q=coffee
+// 상용 public alb
+curl -v -H'Host: api.srch.skplanetx.com' http:///k8s-server-prodsear-3a1a0814d8-1092538725.ap-northeast-2.elb.amazonaws.com/api/ohsara/1.0/search/all?q=coffee
 
 ###### 자동완성
 curl -XGET -H "Content-Type: application/json" "https://search-dev-search-es-68-m3m4ba72w3vnzzx7isgdh74fre.ap-northeast-2.es.amazonaws.com/syrup_ac/_search" -d '
