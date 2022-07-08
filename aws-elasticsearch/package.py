@@ -14,12 +14,12 @@ file_name = '' # The path to the file to upload
 bucket_name = '' # The name of the S3 bucket to upload to
 s3_key = '' # The name of the S3 key (file name) to upload to
 package_id = 'F96034076' # The unique identifier of the OpenSearch package to update
-src_domain_name = 'prod-search-es-63-v1'
-dest_domain_name = 'prod-search-es-68'
+src_domain_name = 'prod-search-es-68'
+dest_domain_name = 'prod-search-es-710'
 #src_host = 'https://search-dev-search-es-63-v2-dkl6ndeea7eens5fs2b2nlncbe.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
 #dest_host = 'https://search-dev-search-es-68-m3m4ba72w3vnzzx7isgdh74fre.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
-src_host = 'https://vpc-prod-search-es-63-v1-swr3qvtzjhbygz5lcaqufzfioy.ap-northeast-2.es.amazonaws.com/'
-dest_host = 'https://vpc-prod-search-es-68-ms4p5ayzsizxydjnxlt4ph6utq.ap-northeast-2.es.amazonaws.com/'
+src_host = 'https://vpc-prod-search-es-68-ms4p5ayzsizxydjnxlt4ph6utq.ap-northeast-2.es.amazonaws.com/'
+dest_host = 'https://vpc-prod-search-es-710-3i5elzhiciqpwa2nv2ie5es3vu.ap-northeast-2.es.amazonaws.com/'
 query = '' # A test query to confirm the package has been successfully updated
 
 service = 'es'

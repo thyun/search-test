@@ -2,10 +2,10 @@ import boto3
 import requests
 from requests_aws4auth import AWS4Auth
 
-src_host = 'https://search-dev-search-es-68-m3m4ba72w3vnzzx7isgdh74fre.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
-dest_host = 'https://vpc-dev-search-es-710-oam5efg2l5nia7bqh2yvbneklu.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
-#src_host = 'https://vpc-prod-search-es-63-v1-swr3qvtzjhbygz5lcaqufzfioy.ap-northeast-2.es.amazonaws.com/'
-#dest_host = 'https://vpc-prod-search-es-68-ms4p5ayzsizxydjnxlt4ph6utq.ap-northeast-2.es.amazonaws.com/'
+dev_src_host = 'https://search-dev-search-es-68-m3m4ba72w3vnzzx7isgdh74fre.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
+dev_dest_host = 'https://vpc-dev-search-es-710-oam5efg2l5nia7bqh2yvbneklu.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
+prod_src_host = 'https://vpc-prod-search-es-68-ms4p5ayzsizxydjnxlt4ph6utq.ap-northeast-2.es.amazonaws.com/'
+prod_dest_host = 'https://vpc-prod-search-es-710-3i5elzhiciqpwa2nv2ie5es3vu.ap-northeast-2.es.amazonaws.com/'
 region = 'ap-northeast-2' # e.g. us-west-1
 service = 'es'
 credentials = boto3.Session().get_credentials()
@@ -101,7 +101,8 @@ def restore_snapshot_index():
    
     print(r.text)
 
-register_repo_dev(dest_host)
+#register_repo_dev(dev_dest_host)
+register_repo_prod(prod_dest_host)
 #take_snapshot()
 #restore_snapshot()
 #restore_snapshot_index()
