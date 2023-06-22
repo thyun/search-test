@@ -1,0 +1,18 @@
+curl -X 'POST' \
+  'https://stream.dev.srch.skplanetx.com/api/ocb-comm/tags' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "docs": [
+    {
+      "doc": {
+    "title": "error_sample_2",
+    "tag": "20년 동안 서울에서 살아온 남파 간첩 '김기영'(지현준)은 어느날 북쪽으로부터 '4호 명령'을 하달받는다.\n모든 것을 버리고 무조건 귀환하라! 김기영은 서울 시내를 무작정 걸으면서 자신의 삶을 뒤돌아본다"
+},
+      "_id": "error_sample_2",
+      "_op": "C"
+    }
+  ]
+}'
+
+
