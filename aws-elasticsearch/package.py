@@ -17,7 +17,7 @@ package_id = 'F96034076' # The unique identifier of the OpenSearch package to up
 src_domain_name = 'dev-search-es-710'
 dest_domain_name = 'dev-search-es-250'
 src_host = 'https://vpc-dev-search-es-710-oam5efg2l5nia7bqh2yvbneklu.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
-dest_host = 'https://vpc-dev-search-es-710-oam5efg2l5nia7bqh2yvbneklu.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
+dest_host = 'https://vpc-dev-search-es-250-crdyurhlzxphmrjdfmtz7m23nu.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
 #src_domain_name = 'prod-search-es-710'
 #dest_domain_name = 'prod-search-es-250'
 #src_host = 'https://vpc-prod-search-es-68-ms4p5ayzsizxydjnxlt4ph6utq.ap-northeast-2.es.amazonaws.com/'
@@ -28,7 +28,18 @@ service = 'es'
 credentials = boto3.Session().get_credentials()
 awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service, session_token=credentials.token)
 
-# ****** json key exist ******
+DOMAIN_CONFIGS = [
+  { "domain_name": src_domain_name, "domain_host": src_host },
+  { "domain_name": dest_domain_name, "domain_host": dest_host }
+]
+
+# ****** Get config ******
+def get_domain_name_ep(domain_name):
+  for domain_config in DOMAIN_CONFIGS:
+    if domain_name == domain_config["domain_name"]:
+      return domain_config["domain_host"]
+
+# ****** Get json nested key ******
 def check_nested_value(json_obj, keys):
     if isinstance(json_obj, dict):
         key = keys[0]
@@ -79,7 +90,7 @@ def upload_to_s3(file_name, bucket_name, s3_key):
   except FileNotFoundError:
     sys.exit('File not found. Make sure you specified the correct file path.')
 
-# ****** Update the package in OpenSearch Service *******
+# ****** OpenSearch package *******
 def update_package(package_id, bucket_name, s3_key):
   opensearch = boto3.client('opensearch')
   print(package_id, bucket_name, s3_key)
@@ -92,7 +103,7 @@ def update_package(package_id, bucket_name, s3_key):
   )
   print(response)
 
-# ****** Associate/Dissociate the package to the domain
+# Associate/Dissociate the package to the domain
 def associate_package(package_id, domain_name):
   opensearch = boto3.client('opensearch')
   response = opensearch.associate_package(PackageID=package_id, DomainName=domain_name)
@@ -105,13 +116,22 @@ def dissociate_package(package_id, domain_name):
   print(response)
   print('Dissociating...')
 
+def associate_package_complete(package_id, domain_name):
+  associate_package(package_id, domain_name)
+  wait_for_associate(package_id, domain_name)
+
+def dissociate_package_complete(package_id, domain_name):
+  dissociate_package(package_id, domain_name)
+  wait_for_dissociate(package_id, domain_name)
+
+#wait_for_associate('F180796364', dest_domain_name)
 # Wait for the package to be updated
-def wait_for_update(package_id, domain_name):
+def wait_for_associate(package_id, domain_name):
   opensearch = boto3.client('opensearch')
   response = opensearch.list_packages_for_domain(DomainName=domain_name)
   package_details = response['DomainPackageDetailsList']
 
-  # associate -> wait for ACTIVE, dissociate -> wait for no package in package_details
+  # associate -> wait for ACTIVE
   for package in package_details:
     if package['PackageID'] == package_id:
       status = package['DomainPackageStatus']
@@ -122,11 +142,23 @@ def wait_for_update(package_id, domain_name):
         sys.exit('Association failed. Please try again.')
       else:
         time.sleep(10) # Wait 10 seconds before rechecking the status
-        wait_for_update(package_id, domain_name)
+        wait_for_associate(package_id, domain_name)
 
-# ****** List package for domain ******
-def list_package(domain_name, prefix=""):
-  print(f"List package: {domain_name} prefix={prefix}")
+def wait_for_dissociate(package_id, domain_name):
+  opensearch = boto3.client('opensearch')
+  response = opensearch.list_packages_for_domain(DomainName=domain_name)
+  package_details = response['DomainPackageDetailsList']
+
+  # dissociate -> wait for no package in package_details
+  for package in package_details:
+    if package['PackageID'] == package_id:
+      status = package['DomainPackageStatus']
+      time.sleep(10) # Wait 10 seconds before rechecking the status
+      wait_for_dissociate(package_id, domain_name)
+
+# List package for domain
+def list_packages_for_domain(domain_name, prefix=""):
+  print(f"list_packages_for_domain: {domain_name} prefix={prefix}")
   opensearch = boto3.client('opensearch')
   response = opensearch.list_packages_for_domain(
       DomainName=domain_name,
@@ -144,36 +176,71 @@ def list_package(domain_name, prefix=""):
       packageIDList.append(package["PackageID"])
   return packageIDList
 
-# Sync package
-def sync_package(src_domain_name, dest_domain_name, prefix=""):
+def list_domains_for_package(packageID):
+  opensearch = boto3.client('opensearch')
+  response = opensearch.list_domains_for_package(
+    PackageID=packageID,
+    MaxResults=100
+  )
+  results = []
+  for domainPackageDetail in response["DomainPackageDetailsList"]:
+    domain_name = domainPackageDetail["DomainName"]
+    results.append(domain_name)
+  return results
+
+# List all packages
+def describe_packages():
+  opensearch = boto3.client('opensearch')
+  response = opensearch.describe_packages(
+    MaxResults=100
+  )
+  return(response)
+
+def delete_package(packageID):
+  opensearch = boto3.client('opensearch')
+  response = opensearch.delete_package(
+    PackageID=packageID
+  )
+
+def list_unused_packages():
+  response = describe_packages()
+
+  for packageDetail in response["PackageDetailsList"]:
+    packageID = packageDetail["PackageID"]
+    results = list_domains_for_package(packageID)
+    if len(results) == 0:
+      print(f"packageID={packageID} used=false");
+      #delete_package(packageID)
+
+# Sync package list
+def sync_package_list(src_domain_name, dest_domain_name, prefix=""):
   print("Sync package:")
-  srcPackageIDList = list_package(src_domain_name, prefix)
-  destPackageIDList = list_package(dest_domain_name)
+  srcPackageIDList = list_packages_for_domain(src_domain_name, prefix)
+  destPackageIDList = list_packages_for_domain(dest_domain_name)
   for packageID in srcPackageIDList:
     print(f"Sync {packageID}")
     if (packageID in destPackageIDList):
       print(packageID, " is already associated")
       continue
-    associate_package(packageID, dest_domain_name)
-    wait_for_update(packageID, dest_domain_name)
+    associate_package_complete(packageID, dest_domain_name)
 
-# Clean package
-def clean_package(domain_name, prefix=""):
-  print("Clean package:")
-  packageIDList = list_package(domain_name, prefix)
+# Dissociate package list
+def dissociate_package_list(domain_name, prefix=""):
+  packageIDList = list_packages_for_domain(domain_name, prefix)
   for packageID in packageIDList:
-    dissociate_package(packageID, domain_name)
-    wait_for_update(packageID, dest_domain_name)
+    dissociate_package_complete(packageID, domain_name)
 
-# ****** ES ******
 # words = ['green', 'open', 'vcoloring_ac_request_202211071411', '0cE_7eL7RmqkOjr-0OtS8A', '3', '0', '369', '0', '50.6kb', '50.6kb']
-def find_indices_package(prefix=""):
-  text = es_cat_indices(prefix)
+def find_indices_package(domain_name, prefix=""):
+  host = get_domain_name_ep(domain_name)
+  print(f"find_indices_package: host={host}")
+  text = es_cat_indices(host, prefix)
   lines = text.splitlines()
   for line in lines:
     words = line.split() 
     index = words[2]
-    response = es_get_index(index)
+    response = es_get_index(host, index)
+    #print(response.text)
     jo = response.json()
 
     nested_keys = [index, "settings", "index", "analysis", "tokenizer", "seunjeon", "user_dict_path"]
@@ -183,13 +250,18 @@ def find_indices_package(prefix=""):
     if user_dict_path is not None or synonyms_path is not None:
       print(f"index={index} user_dict_path={user_dict_path} synonyms_path={synonyms_path}")
 
-def find_package_indices(packageID):
-  text = es_cat_indices()
+def find_indices_package2(domain_name, prefix=""):
+  host = get_domain_name_ep(domain_name)
+  print(f"find_indices_package: host={host}")
+  text = es_cat_indices(host, prefix)
+  print(text)
   lines = text.splitlines()
+  results = []
   for line in lines:
     words = line.split() 
     index = words[2]
-    response = es_get_index(index)
+    response = es_get_index(host, index)
+    #print(response.text)
     jo = response.json()
 
     nested_keys = [index, "settings", "index", "analysis", "tokenizer", "seunjeon", "user_dict_path"]
@@ -197,45 +269,112 @@ def find_package_indices(packageID):
     nested_keys = [index, "settings", "index", "analysis", "filter", "synonym_filter", "synonyms_path"]
     synonyms_path = get_nested_value(jo, nested_keys)
     if user_dict_path is not None or synonyms_path is not None:
-      if user_dict_path.endswith(packageID) or synonyms_path.endswith(packageID):
-        print(f"index={index} user_dict_path={user_dict_path} synonyms_path={synonyms_path}")
+      #print(f"index={index} user_dict_path={user_dict_path} synonyms_path={synonyms_path}")
+      results.append({"index": index, "user_dict_path": user_dict_path, "synonyms_path": synonyms_path })
+  return results
 
-def es_cat_indices(prefix=""):
+def find_package_indices(domain_name, packageID):
+  host = get_domain_name_ep(domain_name)
+  text = es_cat_indices(host)
+  print(text)
+  lines = text.splitlines()
+  results = []
+  for line in lines:
+    words = line.split() 
+    index = words[2]
+    response = es_get_index(host, index)
+    #print(index)
+    #print(response.text)
+    jo = response.json()
+
+    nested_keys = [index, "settings", "index", "analysis", "tokenizer", "seunjeon", "user_dict_path"]
+    user_dict_path = get_nested_value(jo, nested_keys)
+    nested_keys = [index, "settings", "index", "analysis", "filter", "synonym_filter", "synonyms_path"]
+    synonyms_path = get_nested_value(jo, nested_keys)
+    if user_dict_path is not None and user_dict_path.endswith(packageID):
+        print(f"index={index} user_dict_path={user_dict_path}")
+        results.append(index)
+    elif synonyms_path is not None and synonyms_path.endswith(packageID):
+        print(f"index={index} synonyms_path={synonyms_path}")
+        results.append(index)
+  return results
+
+# index format: {'index': 'ocb_keyword_homeshopping52_v2_202306231612', 'user_dict_path': 'analyzers/F180796364', 'synonyms_path': 'analyzers/F232408093'}
+def lookup_indices(indices, packageID):
+  for index in indices:
+    user_dict_path = index["user_dict_path"]
+    synonyms_path = index["synonyms_path"]
+    if user_dict_path is not None and user_dict_path.endswith(packageID):
+      return index
+    if synonyms_path is not None and synonyms_path.endswith(packageID):
+      return index
+  return None
+
+def clean_domain_package(domain_name):
+  indices = find_indices_package2(domain_name)
+  packages = list_packages_for_domain(domain_name)
+  print(indices)
+  print(packages)
+  for packageID in packages:
+    index = lookup_indices(indices, packageID)
+    if index is not None:
+      print(f"packageID={packageID} used=true {index}")
+    else:
+      print(f"packageID={packageID} used=false")
+      dissociate_package_complete(packageID, domain_name)
+
+# ****** OpenSearch index *******
+def es_cat_indices(host, prefix=""):
   path = '_cat/indices'
   if len(prefix) > 0:
     path = f'_cat/indices/{prefix}*'
   
-  url = dest_host + path
+  url = host + path
   response = requests.get(url, auth=awsauth)
   return response.text
 
-def es_get_search(query):
+def es_get_search(host, query):
   path = '_search'
   params = {'q': query}
-  url = dest_host + path
+  url = host + path
   response = requests.get(url, params=params, auth=awsauth)
   print('Searching for ' + '"' + query + '"')
   print(response.text)
   return response
 
-def es_get_index(index):
+def es_get_index(host, index):
   path = f'{index}'
   #params = {'q': query}
-  url = dest_host + path
+  url = host + path
   response = requests.get(url, auth=awsauth)
   #print(response.text)
   return response
 
-# Test
-#associate_package('F192314680', dest_domain_name)
-#wait_for_update('F192314680', dest_domain_name)
-#dissociate_package('F192314680', dest_domain_name)
-#wait_for_update('F192314680', dest_domain_name)
+# 테스트 - Associate/dissociate package
+# index=ocb_keyword_homeshopping52_v2_202306231612 user_dict_path=analyzers/F180796364 synonyms_path=analyzers/F232408093
+#dissociate_package_complete('F180796364', dest_domain_name)
+#dissociate_package_complete('F232408093', dest_domain_name)
 
-#packageIDList = list_package(src_domain_name, "vcoloring")
-#sync_package(src_domain_name, dest_domain_name, "vcoloring")
-#clean_package(dest_domain_name, "vcoloring")
+# 테스트 - List package for domain
+packageIDList = list_packages_for_domain(src_domain_name)
+#packageIDList = list_packages_for_domain(src_domain_name, "ocb-")
 
-find_indices_package("vcoloring")
-#find_package_indices("F132754625")
+# 테스트 - Sync package
+# TODO delete_index_list - 현재 Kibana에서 처리
+#sync_package_list(src_domain_name, dest_domain_name, "vcoloring-")
+#delete_index_list(src_domain_name, "vcoloring_")
+#dissociate_package_list(src_domain_name, "vcoloring-")
+
+# 테스트 - index - package 관계 찾기
+# TODO aws account의 ESHttpGet 권한 없음
+# {"Message":"User: arn:aws:sts::175979101058:assumed-role/AWSReservedSSO_OA-developer-common_a041ac6963b123ac/th.yun@skplanet.com is not authorized to perform: es:ESHttpGet with an explicit deny in a service control policy"}
+#indices = find_indices_package2(src_domain_name, "ocb_")
+#indices = find_package_indices(src_domain_name, "F98879945")
+
+# 테스트 - Clean packages for domain, List unused packages
+#clean_domain_package(src_domain_name)
+#clean_domain_package(dest_domain_name)
+#list_unused_packages()
+
+#sync_package_list(src_domain_name, dest_domain_name, "syrup-")
 
