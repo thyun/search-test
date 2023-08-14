@@ -20,8 +20,8 @@ src_host = 'https://vpc-dev-search-es-710-oam5efg2l5nia7bqh2yvbneklu.ap-northeas
 dest_host = 'https://vpc-dev-search-es-250-crdyurhlzxphmrjdfmtz7m23nu.ap-northeast-2.es.amazonaws.com/' # include https:// and trailing /
 #src_domain_name = 'prod-search-es-710'
 #dest_domain_name = 'prod-search-es-250'
-#src_host = 'https://vpc-prod-search-es-68-ms4p5ayzsizxydjnxlt4ph6utq.ap-northeast-2.es.amazonaws.com/'
-#dest_host = 'https://vpc-prod-search-es-710-3i5elzhiciqpwa2nv2ie5es3vu.ap-northeast-2.es.amazonaws.com/'
+#src_host = 'https://vpc-prod-search-es-710-3i5elzhiciqpwa2nv2ie5es3vu.ap-northeast-2.es.amazonaws.com/'
+#dest_host = 'https://vpc-prod-search-es-250-ohhjj6tiv3q4xwd5ot3z4l56uy.ap-northeast-2.es.amazonaws.com/'
 query = '' # A test query to confirm the package has been successfully updated
 
 service = 'es'
