@@ -15,4 +15,21 @@ curl -X 'POST' \
   ]
 }'
 
+curl -X 'POST' \
+  'http://localhost:8080/api/ocb-comm/tags' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "docs": [
+    {
+      "doc": {
+    "title": "error_sample_2",
+    "tag": "20년 동안 걸으면서 자신의 삶을 뒤돌아본다"
+},
+      "_id": "error_sample_2",
+      "_op": "C"
+    }
+  ]
+}'
+
 
