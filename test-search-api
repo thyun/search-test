@@ -8,6 +8,11 @@
 # curl -s -w "\n%{time_starttransfer}\n" -X GET "http://localhost:8080/api/ocb/1.0/search/all52?q=%EC%BB%A4%ED%94%BC&call_id=search_infra&client_code=client_code&client_version=test&n=50&do_spell_checker=true&lat=37.4021182&lon=127.1029423"
 
 ### 검색
+# 오글오글
+curl -s -G --data-urlencode "q=메라" https://pri-api.dev.srch.skplanetx.com/api/ocb-comm/1.0/search/all
+curl -s -G --data-urlencode "q=그넘" https://pri-api.dev.srch.skplanetx.com/api/ocb-comm/1.0/search/all
+curl -s -G --data-urlencode "q=자정적립" https://pri-api.dev.srch.skplanetx.com/api/ocb-comm/1.0/search/all
+
 # OCB 검색
 curl -s -X GET "http://pri-api.dev.srch.skplanetx.com/api/ocb/2.0/search/all52?call_id=swagger_test&client_code=swagger_test&client_version=swagger_test&do_spell_checker=true&gugun_cd=001&ip_gugun_cd=001&ip_local_cd=50&local_cd=50&q=%EC%BB%A4%ED%94%BC&sort=benefit" -H "accept: */*" >> out-ocb1
 curl -s -X GET "http://pri-api.dev.srch.skplanetx.com/api/ocb/2.0/search/all52?call_id=swagger_test&client_code=swagger_test&client_version=swagger_test&do_spell_checker=true&gugun_cd=001&ip_gugun_cd=001&ip_local_cd=50&local_cd=50&q=%EB%B2%84%EA%B1%B0%ED%82%B9&sort=benefit" -H "accept: */*" >> out-ocb2

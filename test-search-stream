@@ -1,3 +1,7 @@
+# scale replicas=0
+kubectl -n stream scale deploy dev-search-stream-consumer --replicas=0
+
+# 색인
 curl -X 'POST' \
   'https://stream.dev.srch.skplanetx.com/api/ocb-comm/tags' \
   -H 'accept: */*' \
