@@ -52,5 +52,5 @@ def setPartition4Period(target_date, period_day):
     end_date = target_date - timedelta(days=1)
     setPartition(start_date, end_date)
 
-setPartition4Str('20231101', '20231102')
+setPartition4Str('20231101', '20231121')
 
